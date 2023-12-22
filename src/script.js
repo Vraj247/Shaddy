@@ -1,5 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+// Add dat.GUI
+import * as dat from 'dat.gui';
 
 /**
  * Base
@@ -167,6 +169,11 @@ scene.add(snowflakes);
 
 
 
+const gui = new dat.GUI();
+gui.add(controls, 'autoRotate'); // Add autoRotate control to GUI
+gui.add(controls, 'enableZoom'); // Add enableZoom control to GUI
+gui.add(mesh.material, 'wireframe').name('Wireframe');
+gui.add(controls, 'autoRotateSpeed', 0, Math.PI).step(Math.PI / 60);
 
 
 
@@ -179,22 +186,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-/**
- * Background Music
- */
-const audio = new Audio('/static/bg.mp3'); // Replace with the actual path to your music file
-audio.loop = true; // Set to true to loop the music
-audio.volume = 1; // Adjust the volume as needed
 
-
-// Check if the audio can be played
-audio.addEventListener('canplaythrough', () => {
-    audio.play();
-});
-
-audio.addEventListener('error', (error) => {
-    console.error('Error loading audio:', error);
-});
 
 /**
  * Animate
