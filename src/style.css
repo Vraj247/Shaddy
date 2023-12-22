@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Default styles for h1 and .title */
+h1 {
+    color: #FAFAFA;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    line-height: normal;
+    font-variant-caps: all-small-caps;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.title {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1196px) {
+    h1 {
+        font-size: 100px;
+        /* Adjust the font size for smaller screens */
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        /* Adjust the font size for mobile devices */
+    }
+}
+
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
