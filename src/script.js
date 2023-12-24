@@ -173,7 +173,7 @@ const gui = new dat.GUI();
 gui.add(controls, 'autoRotate'); // Add autoRotate control to GUI
 gui.add(controls, 'enableZoom'); // Add enableZoom control to GUI
 gui.add(mesh.material, 'wireframe').name('Wireframe');
-gui.add(controls, 'autoRotateSpeed', 0, Math.PI).step(Math.PI / 60);
+gui.add(controls, 'autoRotateSpeed', 0, 10).step(1);
 
 
 
@@ -200,7 +200,7 @@ const tick = () => {
     controls.update()
 
     // Rotate the mesh
-    mesh.rotation.y = elapsedTime * Math.PI / 64  // Adjust the rotation speed by changing the multiplier
+    mesh.rotation.y = elapsedTime * Math.PI / 400  // Adjust the rotation speed by changing the multiplier
     // mesh.rotation.y = elapsedTime * Math.PI / 1
     // mesh.rotation.z = elapsedTime * Math.PI / 1  // Adjust the rotation speed by changing the multiplier
 

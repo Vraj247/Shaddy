@@ -17,9 +17,10 @@ h1 {
     font-style: normal;
     font-weight: 300;
     text-align: center;
-    line-height: normal;
+    line-height: 75%;
     font-variant-caps: all-small-caps;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'poppins', sans-serif;
+    box-shadow: inset
 }
 
 .title {
@@ -27,8 +28,10 @@ h1 {
     width: 100vw;
     height: 100vh;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    gap: 1em;
     flex-shrink: 0;
+    flex-direction: column;
 }
 
 /* Media query for smaller screens */
@@ -53,4 +56,5 @@ h1 {
     top: 0;
     left: 0;
     outline: none;
+
 }
